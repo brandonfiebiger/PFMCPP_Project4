@@ -104,7 +104,11 @@ int IntType::subtract( int lhs, int rhs )
 
 int IntType::divide( int lhs, int rhs )
 {
-    return lhs / rhs; //fix this
+    if( rhs == 0 )
+    {
+        return 0;
+    }
+    return lhs / rhs; 
 }
 
 int IntType::multiply( int lhs, int rhs )
@@ -123,6 +127,8 @@ int main()
     IntType it;
 
 	auto error = it.divide(1, 0);
+    std::cout << "result of it.divide(): " << error << std::endl;
+
 
     auto ftResultAdd = ft.add(3.2f, 23.f );
     std::cout << "result of ft.add(): " << ftResultAdd << std::endl;
