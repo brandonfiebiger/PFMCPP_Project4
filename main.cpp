@@ -4,7 +4,6 @@
  Returning Values tasks 
  
  1) write 3 UDTs named FloatType, DoubleType, IntType.
- 
  2) give each UDT the following member functions:
         add( lhs, rhs );
         subtract( lhs, rhs );
@@ -28,8 +27,135 @@
  Wait for my code review.
  */
 
+
+struct FloatType
+{
+    float add( float lhs, float rhs );
+    float subtract( float lhs, float rhs );
+    float divide( float lhs, float rhs );
+    float multiply( float lhs, float rhs );
+};
+
+float FloatType::add( float lhs, float rhs )
+{
+    return lhs + rhs;
+}
+
+float FloatType::subtract( float lhs, float rhs )
+{
+    return lhs - rhs;
+}
+
+float FloatType::divide( float lhs, float rhs )
+{
+    return lhs / rhs;
+}
+
+float FloatType::multiply( float lhs, float rhs )
+{
+    return lhs * rhs;
+}
+
+struct DoubleType
+{
+    double add( double lhs, double rhs );
+    double subtract( double lhs, double rhs );
+    double divide( double lhs, double rhs );
+    double multiply( double lhs, double rhs );
+};
+
+double DoubleType::add( double lhs, double rhs )
+{
+    return lhs + rhs;
+}
+
+double DoubleType::subtract( double lhs, double rhs )
+{
+    return lhs - rhs;
+}
+
+double DoubleType::divide( double lhs, double rhs )
+{
+    return lhs / rhs;
+}
+
+double DoubleType::multiply( double lhs, double rhs )
+{
+    return lhs * rhs;
+}
+
+struct IntType
+{
+    int add( int lhs, int rhs );
+    int subtract( int lhs, int rhs );
+    int divide( int lhs, int rhs );
+    int multiply( int lhs, int rhs );
+};
+
+int IntType::add( int lhs, int rhs )
+{
+    return lhs + rhs;
+}
+
+int IntType::subtract( int lhs, int rhs )
+{
+    return lhs - rhs;
+}
+
+int IntType::divide( int lhs, int rhs )
+{
+    return lhs / rhs;
+}
+
+int IntType::multiply( int lhs, int rhs )
+{
+    return lhs * rhs;
+}
+
+
+
+
 #include <iostream>
 int main()
 {
+    FloatType ft;
+    DoubleType dt;
+    IntType it;
+
+    auto ftResultAdd = ft.add(3.2f, 23.f );
+    std::cout << "result of ft.add(): " << ftResultAdd << std::endl;
+
+    auto ftResultSubtract = ft.subtract(3.2f, 23.f );
+    std::cout << "result of ft.subtract(): " << ftResultSubtract << std::endl;
+
+    auto ftResultDivide = ft.divide(3.2f, 23.f );
+    std::cout << "result of ft.divide(): " << ftResultDivide << std::endl;
+
+    auto ftResultMultiply = ft.multiply(3.2f, 23.f );
+    std::cout << "result of ft.multiply(): " << ftResultMultiply << std::endl;
+
+    auto dtResultAdd = dt.add(3.26, 23.35 );
+    std::cout << "result of dt.add(): " << dtResultAdd << std::endl;
+
+    auto dtResultSubtract = dt.subtract(3.26, 23.35 );
+    std::cout << "result of dt.subtract(): " << dtResultSubtract << std::endl;
+
+    auto dtResultDivide = dt.divide(3.26, 23.35 );
+    std::cout << "result of dt.divide(): " << dtResultDivide << std::endl;
+
+    auto dtResultMultiply = dt.multiply(3.26, 23.35 );
+    std::cout << "result of dt.multiply(): " << dtResultMultiply << std::endl;
+
+    auto itResultAdd = it.add(3, 23 );
+    std::cout << "result of it.add(): " << itResultAdd << std::endl;
+
+    auto itResultSubtract = it.subtract(3, 23 );
+    std::cout << "result of it.subtract(): " << itResultSubtract << std::endl;
+
+    auto itResultDivide = it.divide(3, 23 );
+    std::cout << "result of it.divide(): " << itResultDivide << std::endl;
+
+    auto itResultMultiply = it.multiply(3, 23 );
+    std::cout << "result of it.multiply(): " << itResultMultiply << std::endl;
     std::cout << "good to go!" << std::endl;
 }
