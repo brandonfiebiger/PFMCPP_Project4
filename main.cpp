@@ -27,6 +27,7 @@
  Wait for my code review.
  */
 
+#include <iostream>
 
 struct FloatType
 {
@@ -106,7 +107,8 @@ int IntType::divide( int lhs, int rhs )
 {
     if( rhs == 0 )
     {
-        return 0;
+       std::cout << "Cannot divide number by zero!" << std::endl; 
+       return 0;
     }
     return lhs / rhs; 
 }
@@ -119,7 +121,6 @@ int IntType::multiply( int lhs, int rhs )
 
 
 
-#include <iostream>
 int main()
 {
     FloatType ft;
